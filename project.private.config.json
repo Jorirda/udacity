@@ -1,0 +1,9 @@
+{
+  "projectname": "udacity",
+  "setting": {
+    "compileHotReLoad": true,
+    "skylineRenderEnable": false,
+    "urlCheck": false
+  },
+  "libVersion": "development"
+}

@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="weather-wrapper">
+  <view class="container">
+    {{nowTemp}}
+  </view>
+  <view class="desc">
+  {{nowWeather}}
+  </view>
+  <image class="weather-bg" src="{{nowWeatherBackground}}" mode="scaleToFill"/>
+  <view class="day-weather">
+  <view class="day-text">{{todayDate}}</view>
+  <view class="temp-text">{{todayTemp}}</view>
+  <image class="arrow-icon" src="/components/images/arrow.png"/>
+  </view>
+</view>
+<view class="timetips">
+  <image class="timetips-icon" src="/components/images/time-icon.png"></image>
+  <view class="timetips-text">Weather Forecast for Next 24 hours</view>
+ </view>
+
+ <scroll-view scroll-x="True">
+    <view class='forecast-list'>
+         <view class="forecast-item" wx:for="{{hourlyWeather}}">
+          <view class= 'forecast-time'> {{item.time}}</view>
+          <image class= 'forecast-weather' src='{{item.iconPath}}'></image>
+            <view class= 'forecast-temp'>{{item.temp}}</view>
+         </view>
+    </view>
+
+  </scroll-view>
